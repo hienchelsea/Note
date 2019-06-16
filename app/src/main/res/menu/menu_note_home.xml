@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuGhim"
+        android:icon="@drawable/icon_push_pin_two"
+        android:title="Ghim"
+        />
+    <item
+        android:id="@+id/menuSetting"
+        android:icon="@drawable/icon_writing"
+        android:title="Sua" />
+    <item
+        android:id="@+id/menuDelete"
+        android:icon="@drawable/icon_delete_one"
+        android:title="Xoa" />
+
+</menu>

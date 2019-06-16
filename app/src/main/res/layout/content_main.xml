@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:padding="16dp"
+            android:src="@drawable/icon_menu"
+            android:id="@+id/imgMenu"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            />
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:text="Note"
+            android:gravity="center"
+            android:textColor="@color/colorWhile"
+            android:textSize="20sp"
+
+
+            />
+        <ImageView
+            android:padding="16dp"
+            android:src="@drawable/icon_search"
+            android:id="@+id/imgSearch"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            />
+
+    </LinearLayout>
+    <fragment
+        android:layout_below="@id/llToolbar"
+        android:id="@+id/frHome"
+        android:name="com.example.cachua.note.ui.fragment.HomeNoteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_home_note" />
+
+</RelativeLayout>

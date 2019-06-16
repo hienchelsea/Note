@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menuList"
+        android:icon="@drawable/icon_list_one"
+        android:title="Check boxes"
+        />
+    <item
+        android:id="@+id/menuImg"
+        android:icon="@drawable/icon_img_one"
+        android:title="Choose image" />
+    <item
+        android:id="@+id/menuCamera"
+        android:icon="@drawable/icon_photo_camera"
+        android:title="Take photo" />
+    <item
+        android:id="@+id/menuMic"
+        android:icon="@drawable/icon_mic_one"
+        android:title="Recording" />
+    <item
+        android:id="@+id/menuDraw"
+        android:icon="@drawable/icon_draw_one"
+        android:title="Drawing" />
+
+</menu>
