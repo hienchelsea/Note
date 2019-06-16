@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhile"
+    android:id="@+id/rc_layout"
+    android:clickable="true"
+    android:focusable="true"
+    android:singleLine="true">
+
+    <LinearLayout
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="18dp"
+            android:src="@drawable/icon_back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imvHagsTag"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="12dp"
+                android:src="@drawable/icon_hashtag" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="11dp"
+                android:src="@drawable/icon_clock" />
+
+            <ImageView
+                android:id="@+id/imvClips"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="11dp"
+                android:src="@drawable/icon_push_pin" />
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:gravity="center"
+                android:layout_width="65dp"
+                android:layout_height="46dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Save"
+                android:textColor="@color/color_white"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/rcIMG"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llRecording"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:id="@+id/imvPlay"
+                    android:padding="20dp"
+                    android:src="@drawable/icon_play"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+                <ImageView
+                    android:id="@+id/imvPause"
+                    android:visibility="gone"
+                    android:padding="20dp"
+                    android:src="@drawable/icon_pause"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:minHeight="40dp"
+                    android:progressTint="@color/colorPrimary" />
+                <ImageView
+                    android:id="@+id/imvProgress"
+                    android:padding="20dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imvDelete"
+                    android:padding="26dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/icon_delete_red"
+                    />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:background="#5deaeaea"
+                android:hint="Title"
+                android:paddingLeft="16dp"
+                android:textSize="24dp"
+                android:textColor="@color/color_black"
+                android:textCursorDrawable="@null"
+
+                />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+
+                <EditText
+                    android:id="@+id/edtNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:hint="Note"
+                    android:visibility="visible"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/color_black"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/llCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rcCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"></android.support.v7.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:padding="12dp"
+                            android:id="@+id/imvAddCheck"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_add_two" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add check" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"></LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/llEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhileDrak"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llColor"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_color_black"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/circle_black" />
+
+            <ImageView
+                android:id="@+id/image_color_red"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/circle_red" />
+
+            <ImageView
+                android:id="@+id/image_color_yellow"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/circle_yellow" />
+
+            <ImageView
+                android:id="@+id/image_color_green"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/circle_green" />
+
+            <ImageView
+                android:id="@+id/image_color_blue"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/circle_blue" />
+
+            <ImageView
+                android:id="@+id/image_color_pink"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/circle_pink" />
+
+            <ImageView
+                android:id="@+id/image_color_brown"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:paddingBottom="16dp"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/circle_brown" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp">
+            <ImageView
+                android:padding="12dp"
+                android:src="@drawable/icon_square_one"
+                android:id="@+id/imvTickBoxes"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/tvOk"
+                android:gravity="center"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:text="OK"
+                android:visibility="gone"
+                />
+
+
+            <ImageView
+                android:id="@+id/imvNoName"
+                android:padding="14dp"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/icon_dot_black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

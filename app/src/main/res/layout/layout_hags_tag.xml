@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:singleLine="true"
+    android:gravity="center"
+    >
+    <ImageView
+        android:padding="8dp"
+        android:src="@drawable/icon_tag"
+        android:gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:gravity="center|left"
+        android:id="@+id/tvHagsTag"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_weight="1"
+        android:background="#00ffffff"
+        />
+    <!--<CheckBox-->
+        <!--android:id="@+id/cbHagsTag"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:buttonTint="@color/colorPrimary"-->
+        <!--/>-->
+    <ImageView
+        android:id="@+id/imvMenu"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_dot_black"
+        />
+
+</LinearLayout>

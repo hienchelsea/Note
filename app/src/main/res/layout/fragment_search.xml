@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorWhile"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/llToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:padding="18dp"
+            android:src="@drawable/icon_back"
+            android:id="@+id/imgBack"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            />
+        <EditText
+            android:layout_marginLeft="16dp"
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:hint="Search your notes"
+            android:gravity="center|left"
+            android:textColor="@color/colorWhile"
+            android:textSize="16sp"
+            android:background="#00ffffff"
+            android:inputType="textEmailAddress"
+
+
+            />
+        <ImageView
+            android:padding="16dp"
+            android:id="@+id/imgSearch"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/icon_search"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llDeoBiet"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/dp16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Loai"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/dp16"
+                />
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <LinearLayout
+                    android:id="@+id/llImg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhileDrakTwo"
+                    android:layout_marginRight="4dp"
+                    >
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Hinh anh"
+                        android:textSize="@dimen/dp16"
+                        android:textColor="@color/colorPrimaryDark"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llRec"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhileDrakTwo"
+                    android:layout_marginRight="4dp"
+                    >
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Am thanh"
+                        android:textSize="@dimen/dp16"
+                        android:textColor="@color/colorPrimaryDark"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llCheck"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhileDrakTwo"
+                    android:layout_marginRight="4dp"
+                    >
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Danh sach"
+                        android:textSize="@dimen/dp16"
+                        android:textColor="@color/colorPrimaryDark"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="@dimen/dp16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nhan"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/dp16"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="8dp"
+                android:id="@+id/rcTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:padding="@dimen/dp16"
+        android:layout_below="@id/llToolbar"
+        android:id="@+id/rcNote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
